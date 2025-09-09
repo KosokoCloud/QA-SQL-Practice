@@ -23,7 +23,7 @@ SELECT * FROM Users WHERE = 'active';
 **Query**
 ```sql
 SELECT * FROM Orders WHERE total_amount < 0;
-
+ 
 
 
 

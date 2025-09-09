@@ -17,6 +17,7 @@ SELECT * FROM Users WHERE = 'active';
 
 ---
 
+
 ## 03_orders_with_negative_amounts.sql
 **Scenario:** Detect invalid orders with negative totals.
 
@@ -26,8 +27,18 @@ SELECT * FROM Orders WHERE total_amount < 0;
  
 
 
-
 ---
 
+## 04_product_without_stock.sql
+**Scenario:** Ensure no product with active status has zero stock.
+
+**Query:**
+```sql
+SELECT Product_id, name, stock_qty
+FROM Products
+WHERE active_flag = 1 AND stock_qty = 0;
+
+
+---
 
 

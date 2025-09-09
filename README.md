@@ -18,6 +18,16 @@ SELECT * FROM Users WHERE = 'active';
 ---
 
 
+## 02_Users_With_No_Orders.sql
+**Scenario:** Check for registered users who have never placed an order
+
+*Query**
+```sql
+SELECT u.user_id, u.name FROM Users u LEFT JOIN Orders o ON u.user_id = o.user_id WHERE o.order_id IS NULL;
+
+
+---
+
 ## 03_orders_with_negative_amounts.sql
 **Scenario:** Detect invalid orders with negative totals.
 
